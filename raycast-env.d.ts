@@ -9,46 +9,33 @@
 
 type ExtensionPreferences = {
   /** CLI Path - Path to the Proton Pass CLI binary (leave empty for default) */
-  cliPath?: string;
+  "cliPath"?: string,
   /** Primary Action - Default action when pressing Enter on a login item */
-  primaryAction:
-    | "copy-password"
-    | "copy-username"
-    | "copy-totp"
-    | "open-browser"
-    | "paste-password"
-    | "paste-username"
-    | "paste-totp";
+  "primaryAction": "copy-password" | "copy-username" | "copy-totp" | "open-browser" | "paste-password" | "paste-username" | "paste-totp",
   /** Secondary Action - Action when pressing ⌘+Enter on a login item */
-  secondaryAction:
-    | "copy-password"
-    | "copy-username"
-    | "copy-totp"
-    | "open-browser"
-    | "paste-password"
-    | "paste-username"
-    | "paste-totp";
+  "secondaryAction": "copy-password" | "copy-username" | "copy-totp" | "open-browser" | "paste-password" | "paste-username" | "paste-totp",
   /** Close After Copy - Close Raycast window after copying a value */
-  closeAfterCopy: boolean;
-};
+  "closeAfterCopy": boolean
+}
 
 /** Preferences accessible in all the extension's commands */
-declare type Preferences = ExtensionPreferences;
+declare type Preferences = ExtensionPreferences
 
 declare namespace Preferences {
-  /** Preferences accessible in the `search` command */
-  export type Search = ExtensionPreferences & {};
+  /** Preferences accessible in the `items` command */
+  export type Items = ExtensionPreferences & {}
   /** Preferences accessible in the `vaults` command */
-  export type Vaults = ExtensionPreferences & {};
+  export type Vaults = ExtensionPreferences & {}
   /** Preferences accessible in the `password` command */
-  export type Password = ExtensionPreferences & {};
+  export type Password = ExtensionPreferences & {}
 }
 
 declare namespace Arguments {
-  /** Arguments passed to the `search` command */
-  export type Search = {};
+  /** Arguments passed to the `items` command */
+  export type Items = {}
   /** Arguments passed to the `vaults` command */
-  export type Vaults = {};
+  export type Vaults = {}
   /** Arguments passed to the `password` command */
-  export type Password = {};
+  export type Password = {}
 }
+

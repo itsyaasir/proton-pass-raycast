@@ -12,8 +12,8 @@
   "license": "MIT",
   "commands": [
     {
-      "name": "search",
-      "title": "Search Items",
+      "name": "items",
+      "title": "My Items",
       "subtitle": "Proton Pass",
       "description": "Search all your Proton Pass items",
       "mode": "view",
@@ -27,7 +27,7 @@
     },
     {
       "name": "vaults",
-      "title": "Browse Vaults",
+      "title": "My Vaults",
       "subtitle": "Proton Pass",
       "description": "Browse items by vault",
       "mode": "view",
@@ -158,7 +158,7 @@
     "@types/react": "19.2.7",
     "eslint": "^9.39.0",
     "prettier": "^3.5.3",
-    "typescript": "^5.8.3"
+    "typescript": "^5.9.3"
   },
   "scripts": {
     "build": "ray build --skip-types -e dist -o dist",
