@@ -1,0 +1,172 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "proton-pass",
+  "title": "Proton Pass",
+  "description": "Search and manage your Proton Pass items from Raycast",
+  "icon": "proton-pass-icon.png",
+  "author": "itsyasir",
+  "categories": [
+    "Productivity",
+    "Security"
+  ],
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "search",
+      "title": "Search Items",
+      "subtitle": "Proton Pass",
+      "description": "Search all your Proton Pass items",
+      "mode": "view",
+      "keywords": [
+        "proton",
+        "pass",
+        "password",
+        "login",
+        "credential"
+      ]
+    },
+    {
+      "name": "vaults",
+      "title": "Browse Vaults",
+      "subtitle": "Proton Pass",
+      "description": "Browse items by vault",
+      "mode": "view",
+      "keywords": [
+        "proton",
+        "pass",
+        "vault",
+        "folder"
+      ]
+    },
+    {
+      "name": "password",
+      "title": "Password Generator",
+      "subtitle": "Proton Pass",
+      "description": "Generate passwords, passphrases, and check password strength",
+      "mode": "view",
+      "keywords": [
+        "proton",
+        "pass",
+        "generate",
+        "passphrase",
+        "random"
+      ]
+    }
+  ],
+  "preferences": [
+    {
+      "name": "cliPath",
+      "title": "CLI Path",
+      "description": "Path to the Proton Pass CLI binary (leave empty for default)",
+      "type": "textfield",
+      "required": false,
+      "placeholder": "/usr/local/bin/pass-cli"
+    },
+    {
+      "name": "primaryAction",
+      "title": "Primary Action",
+      "description": "Default action when pressing Enter on a login item",
+      "type": "dropdown",
+      "required": false,
+      "default": "copy-password",
+      "data": [
+        {
+          "title": "Copy Password",
+          "value": "copy-password"
+        },
+        {
+          "title": "Copy Username",
+          "value": "copy-username"
+        },
+        {
+          "title": "Copy One-Time Password",
+          "value": "copy-totp"
+        },
+        {
+          "title": "Open in Browser",
+          "value": "open-browser"
+        },
+        {
+          "title": "Paste Password",
+          "value": "paste-password"
+        },
+        {
+          "title": "Paste Username",
+          "value": "paste-username"
+        },
+        {
+          "title": "Paste One-Time Password",
+          "value": "paste-totp"
+        }
+      ]
+    },
+    {
+      "name": "secondaryAction",
+      "title": "Secondary Action",
+      "description": "Action when pressing ⌘+Enter on a login item",
+      "type": "dropdown",
+      "required": false,
+      "default": "paste-password",
+      "data": [
+        {
+          "title": "Copy Password",
+          "value": "copy-password"
+        },
+        {
+          "title": "Copy Username",
+          "value": "copy-username"
+        },
+        {
+          "title": "Copy One-Time Password",
+          "value": "copy-totp"
+        },
+        {
+          "title": "Open in Browser",
+          "value": "open-browser"
+        },
+        {
+          "title": "Paste Password",
+          "value": "paste-password"
+        },
+        {
+          "title": "Paste Username",
+          "value": "paste-username"
+        },
+        {
+          "title": "Paste One-Time Password",
+          "value": "paste-totp"
+        }
+      ]
+    },
+    {
+      "name": "closeAfterCopy",
+      "title": "Close After Copy",
+      "description": "Close Raycast window after copying a value",
+      "type": "checkbox",
+      "required": false,
+      "default": true,
+      "label": "Close window after copying"
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.103.6",
+    "@raycast/utils": "^2.2.2"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "^2.1.1",
+    "@types/node": "22.15.21",
+    "@types/react": "19.2.7",
+    "eslint": "^9.39.0",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.3"
+  },
+  "scripts": {
+    "build": "ray build --skip-types -e dist -o dist",
+    "dev": "ray develop",
+    "fix-lint": "ray lint --fix",
+    "prettier": "prettier --write .",
+    "lint": "ray lint",
+    "prepublishOnly": "echo \"\\n\\nIt seems like you are trying to publish the Raycast extension to npm.\\n\\nIf you did intend to publish it to npm, remove the \\`prepublishOnly\\` script and rerun \\`npm publish\\` again.\\nIf you wanted to publish it to the Raycast Store instead, use \\`npm run publish\\` instead.\\n\\n\" && exit 1",
+    "publish": "npx @raycast/api@latest publish"
+  }
+}
