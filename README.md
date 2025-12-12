@@ -10,10 +10,7 @@ Search and manage your Proton Pass items directly from Raycast.
 ### Installing the CLI
 
 1. Download from [here](https://protonpass.github.io/pass-cli/)
-2. Install to one of these locations (or set custom path in preferences):
-   - `~/.local/bin/pass-cli`
-   - `/usr/local/bin/pass-cli`
-   - `/opt/homebrew/bin/pass-cli`
+2. Follow the instructions on the page. 
 3. Authenticate: `pass-cli login`
 
 ## Commands
